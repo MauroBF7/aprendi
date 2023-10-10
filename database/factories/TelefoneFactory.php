@@ -17,7 +17,7 @@ class TelefoneFactory extends Factory
     public function definition(): array
     {
         return [
-            'telefone'=>$this->faker->ean13(),
+            'telefone'=>$this->faker->ean8(),
             'responsa'=>$this->faker->sentence(3),
             'local'=>$this->faker->sentence(3),
             'divisa'=>$this->faker->sentence(1),

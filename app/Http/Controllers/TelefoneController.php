@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTelefoneRequest;
 use App\Http\Requests\UpdateTelefoneRequest;
 use App\Models\Telefone;
+use Illuminate\Http\Request;
 
 class TelefoneController extends Controller
 {
@@ -51,7 +52,7 @@ class TelefoneController extends Controller
      */
     public function show(Telefone $telefone)
     {
-        $telefone= Telefone::where('numero',$numero)->first();
+        //$telefone= Telefone::where('numero',$numero)->first();
         return view('telefones.show',[
             'telefone'=>$telefone,
         ]);
@@ -65,7 +66,7 @@ class TelefoneController extends Controller
 
     public function edit(Telefone $telefone)
     {
-        return view('telefone.edit',[
+        return view('telefones.edit',[
             'telefone'=>$telefone
         ]);
     }

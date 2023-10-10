@@ -1,14 +1,9 @@
-@extends('laravel-usp-theme::master')
+<!--@extends('laravel-usp-theme::master')-->
+@extends('main')
 @section('content')
-@forelse ($telefones as $telefone)
-    <li>{{ $telefone->id }}</li>
-    <li>{{ $telefone->telefone }}</li>
-    <li>{{ $telefone->responsa }}</li>
-    <li>{{ $telefone->local }}</li>
-    <li>{{ $telefone->divisa }}</li>
-    <li>{{ $telefone->secao }}</li>
-    <li><HR><BR></li>
-@empty
-    Não há telefones cadastrados para mostrar!
-@endforelse 
+    @forelse ($telefones as $telefone)
+        @include('telefones.partials.fields')
+    @empty
+        Não há telefones cadastrados para mostrar!
+    @endforelse 
 @endsection

@@ -1,6 +1,6 @@
 <!-- ### partials/fields.blade.php #### -->
 <ul>
-    <li><a href="/telefones/{{$telefone->id}}">{{$telefone->telefone}}</a></li>
+    <li><a href="/telefones/{{$telefone->id}}/edit">{{$telefone->telefone}}</a></li>
     <li>{{$telefone->responsa}}</li>
     <li>{{$telefone->local}}</li>
     <li>{{$telefone->divisa}}</li>
