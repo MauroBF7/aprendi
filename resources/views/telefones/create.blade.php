@@ -1,0 +1,10 @@
+@extends('laravel-usp-theme::master')
+@extends('main')
+
+@section('content')
+<form method="post" action="/telefones/{{$telefone->id}}">
+    @csrf
+    @method('patch')
+    @include('telefones.partials.fields')
+</form>
+@endsection
